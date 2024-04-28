@@ -1,0 +1,1 @@
+var malloc_nogc=[];function malloc(a){var b=new Uint8Array(a);return malloc_nogc.push(b),read_ptr_at(addrof(b)+16)}

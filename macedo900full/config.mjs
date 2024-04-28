@@ -1,0 +1,1 @@
+export const ps4_8_03=1;export const ps4_9_00=2;export const ps5_5_00=2;export const ps4_6_50=3;export const ps4_6_00=4;export function set_target(a){switch(a){case ps4_8_03:case ps4_9_00:case ps4_6_00:case ps4_6_50:break;default:throw RangeError("invalid target: "+target);}target=a}export let target=2;

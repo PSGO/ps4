@@ -1,0 +1,97 @@
+<html>
+ <head> 
+  <meta charset="utf-8"> 
+  <link rel="shortcut icon" href="https://www.psgo.tk/psgo.ico" type="image/x-icon">
+  <title>折腾常见问题 - PSGO.TK</title> 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7VRDNYTJ1Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7VRDNYTJ1Y');
+</script>
+   <style> 
+  button
+    {
+    font-family:arial;
+    font-size:22px;
+    font-weight:700;
+    border:2px solid #404040;
+    border-radius:4px;
+	margin:10px 2px; 
+    padding:10px;
+    cursor:pointer;
+    display:inline-block;
+    text-decoration:none;
+    background:#CFB53B;
+    box-shadow:0 5px 0 #888888;
+    } 
+
+    
+    button:hover
+    {
+    color: #CFB53B;
+    font-size:22px;
+    background:#161616;
+    border:2px solid #fff;
+    box-shadow:0 5px 0 #ccc;
+    } 
+    
+    button:active
+    {
+    background:#CFB53B;
+    position:relative;
+    color:#000;
+    top:5px;
+    box-shadow:none
+    }
+    </style>
+ <head> 
+   <body style="background-color:#181818;">
+        <br>
+   		<h1 style="font-size:50px;color:#CFB53B;text-align:center;">常见问题</h1>
+		<!--<center><button style="width:200px;text-align:center;" onmouseover="progress.innerHTML=''"; onmouseout="progress.innerHTML=''" onclick="window.location.href='comment/index.html';"><font color=""> 留言板 </font></button></center>-->
+        <br>
+		<div style="width:800px;margin:50px auto;">
+		<p style="font-size:20px;font-weight:bold;color:#CFB53B;">特别说明：由于7.22日刚刚上线，可能难免会碰到一些小bug或者浏览器兼容问题，另外我和朋友都没有4和7系统无法测试。描述问题发送邮件至psgo.eu.org@gmail.com</p>
+        <br>
+		<p style="font-size:16px;font-weight:bold;color:#CFB53B;">上线后集中反馈问题比较多的一个是6.72 Phive缓存失败问题，经过排查有文件上传服务器不完整，另外CDN缓存有延迟，这个还需要再观察一下，如果持续失败就用首页中wr0zen的英文版Phive暂时顶一下；另一个是反馈ESP8266刷机速度特别慢，ESP32个别固件报错和刷机网页加载慢的问题，由于页面需要加载整个刷机的js库（只是首次打开网页慢），而且在厂商服务器上，受到一定的局限性，关于bug已经在和厂商的开发者沟通，后面计划换解决方案。发现问题尽早尽快提哈，小问题晚上弄，大问题只能周末。</p>
+        <br>
+		<p style="font-size:20px;font-weight:bold;color:#CFB53B;">Q：折腾的时候为什么会有死机断电花屏重启等情况出现？</p>
+		<p style="font-size:20px;color:white;">A：这个涉及到折腾的原理，首先通过webkit浏览器漏洞拿到低权限，然后通过直接操作内存攻击内核漏洞，这种方式有一定概率会导致系统内核崩溃，从而出现死机断电花屏重启等现象，这和早期的PSP图片折腾类似，与Switch这种通过IC绕过校验的方式来比稳定性要略差；另外也和作者代码实现方式和有无bug也有关系。</p>
+        <br>
+		<p style="font-size:20px;font-weight:bold;color:#CFB53B;">Q：这么多的折腾方案选哪个比较好？</p>
+		<p style="font-size:20px;color:white;">A：根据自身需求，如果是不需要额外功能插件就选lite版本，如果需要插件功能就选完整版，如果对稳定性要求比较高就选口碑不错的比如Leeful、hippie68的方案，如果稳定性差异不大的情况下，就选择你喜欢的界面就行了，本身并没有质的差异。</p>
+        <br>
+		<p style="font-size:20px;font-weight:bold;color:#CFB53B;">Q：折腾的时机怎么把握？</p>
+		<p style="font-size:20px;color:white;">A：这是个玄学！不过本人从5.X系统一路走来的经验来看，刚开机的时候死机概率最大，原因也很简单，虽然已经启动看到启动页了，但是这时候有些系统组件还未完全加载完成，这时候去操作内存自然很容易崩。建议开机看到启动页后等个2分钟左右再操作。</p>
+        <br>
+		<p style="font-size:20px;font-weight:bold;color:#CFB53B;">Q：唤醒死机怎么解决？</p>
+		<p style="font-size:20px;color:white;">A：首先你要确保拟采用的折腾方案本身没问题，然后缓存的过程需要确保网络通畅不会造成文件损坏，持续不行请更换方案，最后很重要的一点是要在设置-省电设置-设定待命模式里的功能，第三项“将应用程序设定为暂停状态”打勾，待机前关闭当前正在运行的游戏。</p>
+        <br>
+		<p style="font-size:20px;font-weight:bold;color:#CFB53B;">Q：9.00系统需要U盘写入一个镜像文件，一大一小两种怎么选？</p>
+		<p style="font-size:20px;color:white;">A：建议选文件小的那个，也是最新的，也是普遍用的最多的，两个文件并没有本质区别，pico版本只是为了方便开发者制作ESP32固件，下载地址就在首页的“工具包”。</p>
+        <br>
+		<p style="font-size:20px;font-weight:bold;color:#CFB53B;">Q：启动游戏时提示CE-30005-8错误是什么鬼？</p>
+		<p style="font-size:20px;color:white;">A：说明系统版本过低，与游戏启动要求版本不符，一般安装降级补丁即可解决，又或者可以考虑升级系统。</p>
+        <br>
+		<p style="font-size:20px;font-weight:bold;color:#CFB53B;">Q：断电对主机有影响吗？</p>
+		<p style="font-size:20px;color:white;">A：相比以前，现在的电子产品都有很好的断电保护，但是机械硬盘这玩意突然断电会容易产生坏道，容易造成文件损坏无法进入系统或者游戏无法启动等现象。</p>
+        <br>
+		<p style="font-size:20px;font-weight:bold;color:#CFB53B;">Q：ESP怎么选？</p>
+		<p style="font-size:20px;color:white;">A：9.00系统建议选择ESP32（可模拟U盘全自动注入），紫色和红色两种板子都可以，紫色对固件兼容性更好，红色做工质量更好（极个别编译方式特殊的固件不支持红色板子）；其他系统选择ESP8266 Lolion v3黑色就行。</p>
+        <br>
+		<p style="font-size:20px;font-weight:bold;color:#CFB53B;">Q：ESP刷机快结束时提示“timed out waiting for packet header”，怎么解决？</p>
+		<p style="font-size:20px;color:white;">A：经过反复多次测试，对实际使用并没有影响，这是由于ESP开发版、Esp Web Tool和固件编译三者不兼容导致，目前只能等厂商更新JS库。</p>
+        <br>
+		</div> 
+		<br><br><br>
+	<h1 style="font-size:20px;color:#CFB53B;text-align:center;">-- 持续完善更新中 --</h1>
+	<br>
+	<h1 style="font-size:20px;color:#CFB53B;text-align:center;">计划组建Telegram群组和公告频道，可以在群内反馈问题找资源</h1>
+	<h1 style="font-size:20px;color:#CFB53B;text-align:center;">现招募1-2个热心管理员，负责群活跃、需求bug收集、发布信息</h1>
+    <br><br><br><br><br><br>
+   </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>GoldHEN v2.3 Loader By Leeful</title>
+
+</head>
+
+<body style="margin:0;">
+
+<embed id="myembed1" name="myembed" frameborder="0" style="margin:0px;width:99.38%;height:98.7vh;border:5px solid #CFB53B;display:none;"></embed>
+
+<script>
+
+UA=navigator.userAgent.substring(navigator.userAgent.indexOf("0.00 (")+28,navigator.userAgent.indexOf(") Apple"));
+
+if(UA!="5.05" && UA!="5.07" && UA!="6.72" && UA!="layStation 4/9.00"){alert("Only Firmware Versions 5.05, 5.07, 6.72 & 9.00 are supported!");}
+
+function swapPage(PageID){myembed1.style.display="block";var Clone=myembed1.cloneNode(true);Clone.setAttribute('src',PageID);myembed1.parentNode.replaceChild(Clone,myembed1);}
+
+if(UA=="5.05" || UA=="5.07"){swapPage('hen/505.html');}
+
+if(UA=="6.72"){swapPage('hen/672.html');}
+
+if(UA=="layStation 4/9.00"){swapPage('hen/900.html');}
+
+function awaitpzzzz(){alert("!");}
+
+</script>
+
+</body>
+
+</html>

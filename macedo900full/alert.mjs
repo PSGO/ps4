@@ -1,0 +1,1 @@
+addEventListener("unhandledrejection",a=>{const b=a.reason;throw alert(`${b}\n`+`${b.sourceURL}:${b.line}:${b.column}\n`+`${b.stack}`),b}),import("./exploit.mjs");
