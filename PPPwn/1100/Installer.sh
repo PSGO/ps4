@@ -1,16 +1,16 @@
-apt-get update 
-apt-get upgrade 
+opkg update
+sudo apt-get upgrade 
 
-apt install python3 
+opkg install python3
 python3 --version
 
-apt install python3-pip 
+opkg install python3-pip
 pip3 --version
 
-apt install git
+sudo apt install git
 git —version
 
-apt install gcc
+opkg install git
 gcc --version
 
 git clone --recursive https://github.com/TheOfficialFloW/PPPwn
